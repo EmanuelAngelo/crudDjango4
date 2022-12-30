@@ -4,4 +4,4 @@ from .models import Pessoa
 
 @admin.register(Pessoa)
 class PessoaAdmin(admin.ModelAdmin):
-    list_display = ('nome','id')
+    list_display = ('id','nome','idade','sexo')

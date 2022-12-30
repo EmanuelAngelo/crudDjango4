@@ -11,7 +11,9 @@
     <h4>{{ pessoa.id }} - {{ pessoa.nome }}</h4>
     
     <form action="{% url 'update' pessoa.id %}" method="POST"> {% csrf_token %}
-        <input type="text" name="nome" value="{{pessoa.nome}}">
+        Nome <input type="text" name="nome" value="{{pessoa.nome}}"><br><br>
+        Idade <input type="number" name="idade" value="{{pessoa.idade}}"><br><br>
+        Sexo <input type="text" name="sexo" value="{{pessoa.sexo}}"><br><br>
         <button type="submit">Atualizar</button>
     </form>
 </body>
