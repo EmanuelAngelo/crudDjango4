@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizando - {{ pessoa.nome }}</title>
+</head>
+<body>
+    <h3>Atualizando pessoa - UPDATE</h3>
+    <h4>{{ pessoa.id }} - {{ pessoa.nome }}</h4>
+    
+    <form action="{% url 'update' pessoa.id %}" method="POST"> {% csrf_token %}
+        <input type="text" name="nome" value="{{pessoa.nome}}">
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>
